@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterThuCung.master.cs" Inherits="MasterThuCung" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+<%--    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />--%>
+    <script src="https://kit.fontawesome.com/60faa90380.js"></script>
+    <link rel="stylesheet" type="text/css" href="StyleForPetcss.css" />
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header style="height: 170px">
+            <a href="../TrangChu/TrangChu.aspx"><img src="../DuLieu/Logo.png" style="height: 165px; width: 304px; padding-left: 290px;"/></a>
+            <div id="search"><asp:TextBox ID="txtSearch" runat="server" Height="29px" Width="410px"></asp:TextBox></div>
+            <div id="s_btn" style="text-align:right">
+                <a href="../Search.aspx"><asp:Button ID="btnSearch" runat="server" Text="Search" Height="35px" PostBackUrl="~/Search.aspx" /></a>
+
+            </div>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                <div style="text-align:right; margin-top: -95px; margin-right: 200px; color: black ">
+                    <a href="../TrangChu/DangNhapTk.aspx?" style="text-decoration:none; color: #c96 ">Đăng nhập</a>&nbsp;&nbsp;&nbsp; <a href="../TrangChu/DangKy.aspx" style="text-decoration:none; color: #c96 ">Đăng ký</a>
+                </div>
+            </asp:ContentPlaceHolder>
+            
+        </header>
+        <div id="header-link">
+            <div id="menu">
+                <ul>
+                    <li><i class="fas fa-bars"></i><a href="#"><b>DANH MỤC</b></a>
+                        <div class="submenu">
+                            <ul >
+                                <li><a href="#">Chó Cảnh</a><i class="fas fa-chevron-right" style="float:right"></i>
+                                    <div class="submenu2">
+                                        <ul>
+                                            <li><a href="../PageLoai/page_husky.aspx?">Chó Husky</a></li>
+                                            <li><a href="../../PageLoai/page_alaska.aspx?">Chó Alaska</a></li>
+                                            <li><a href="../../PageLoai/page_shiba.aspx?">Chó Shiba</a></li>
+                                            <li><a href="../../PageLoai/page_corgi.aspx?">Chó Corgi</a></li>
+                                            <li><a href="../../PageLoai/page_chihuahua.aspx?">Chó Chihuahua</a></li>
+                                            <li><a href="../../PageLoai/page_poodal.aspx?">Chó Poodle</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Mèo Cảnh</a><i class="fas fa-chevron-right"></i>
+                                    <div class="submenu2">
+                                        <ul>
+                                            <li><a href="../../PageLoai/page_meoanhlongngan.aspx?">Mèo Anh lông ngắn</a></li>
+                                            <li><a href="../../PageLoai/page_meoanhlongdai.aspx?">Mèo Anh lông dài</a></li>
+                                            <li><a href="../../PageLoai/page_meoscottishtaicup.aspx?">Mèo Scottish tai cụp</a></li>
+                                            <li><a href="../../PageLoai/page_meomunchkin.aspx?">Mèo Munchkin</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Phụ kiện</a><i class="fas fa-chevron-right"></i>
+                                    <div class="submenu2">
+                                        <ul>
+                                            <li><a href="#">Phụ kiện, Đồ dùng cho chó</a><i class="fas fa-chevron-right" style="float:right"></i>
+                                                <div class="submenu3">
+                                                    <ul>
+                                                        <li><a href="../VatDungChoCho/Page_ThucAnCho.aspx?">Thức ăn cho chó</a></li>
+                                                        <li><a href="../VongCoWeb/Page_VongCo.aspx?">Vòng cổ, dây dắt, Rọ mỏm</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#">Phụ kiện, Đồ dùng cho mèo</a><i class="fas fa-chevron-right"></i>
+                                                <div class="submenu3">
+                                                    <ul>
+                                                        <li><a href="../VatDungChoMeo/Page_ThucAnMeo.aspx?">Thức ăn cho mèo</a></li>
+                                                        <li><a href="../VatDungChoMeo/Page_CatMeo.aspx?">Cát vệ sinh</a></li>
+                                                        <li><a href="../VongCoWeb/Page_VongCo.aspx?">Vòng cổ, dây dắt</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li ><i class="fas fa-home" style="height:50px;width:50px"></i><a href="../TrangChu/TrangChu.aspx?" ><b>TRANG CHỦ</b></a></li>
+                    <li><i class="fas fa-user"></i><a href="../GioiThieu.aspx"><b>GIỚI THIỆU</b></a></li>
+                    <li><i class="fas fa-newspaper"></i><a href="../TinTuc.aspx"><b>TIN TỨC</b></a></li>
+                    <li><i class="fas fa-phone"></i><a href="../LienHe.aspx"><b>LIÊN HỆ</b></a></li>
+                </ul>
+            </div>
+           <%--<div id="search">
+                <ul>
+                    <li>
+                       <input type="text" name="box" placeholder="Nhập từ khóa..." style="Width:200px;Height:40px"/>
+                    </li>
+                </ul>
+            </div>--%>
+            <%--<div class="button">
+                <a href="#"><img src="../DuLieu/search.png" style="height:40px;width:50px" /></a>
+            </div>--%>
+            <%--<div id="search" style="padding-top: 20px;">
+            <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
+            <a href="../TrangChu/Search.aspx"><asp:Button ID="btnSearch" runat="server" Text="Search" PostBackUrl="../TrangChu/Search.aspx"/></a>
+                </div>--%>
+         
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer" style="color:white; ">
+            <table style="width: 100%">
+                <tr style="text-align: left">
+                    <th><h2>THÔNG TIN</h2></th>
+                    <th><h2>TRỢ GIÚP</h2></th>
+                    <th><h2>HỖ TRỢ KHÁCH HÀNG</h2></th>
+                    <th>Theo dõi chúng tôi</th>
+                </tr>
+                <tr>
+                    <td style="padding-left:50px">Về chúng tôi<br />
+                        Quy định bảo mật<br />
+                        Thỏa thuận sử dụng<br />
+                        Quy chế hoạt động
+                    </td>
+                    <td>
+                        Hướng dẫn sử dụng<br />
+                        Upload dữ liệu</><br />
+                        Hỏi và đáp
+                    </td>
+                    <td>
+                        Liên hệ<br />
+                        Hỗ trợ trực tuyến<br />
+                        Liên hệ quảng cáo
+                    </td>
+                    <td>
+                <a href="https://www.facebook.com/NHC223"><img src="\DuLieu\facebook.png" height="30" width="30" /></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.facebook.com/NHC223"> <img src="\DuLieu\ins.jpg" height="30" width="30" /></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.facebook.com/NHC223"> <img src="\DuLieu\tele.jpg" height="30" width="30" /></a>
+                    </td>
+                    
+                </tr>
+                <tr style="text-align: left">
+                    <th><h2>CHỊU TRÁCH NHIỆM NỘI DUNG</h2></th>
+                    <th><h2>LIÊN HỆ</h2></th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nguyễn Duy Mạnh- Giám đốc công ti TNHH VINAGANGS</td>
+                    <td>168 Huỳnh Thúc Kháng phường Yên Đỗ Thành phố Pleiku<br />
+                        Hotline: 0969564250<br />
+                        Địa chỉ Email: nguyenduymanh3k3@gmail.com</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </table>
+        </div>    
+    </form>
+    
+</body>
+</html>
